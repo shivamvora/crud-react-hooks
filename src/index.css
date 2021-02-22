@@ -15,7 +15,7 @@ code {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color:;
+  background-color:rgb(235, 233, 233);
   top: -10;
   align-items: center;
   display: flex;
