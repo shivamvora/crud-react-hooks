@@ -7,8 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Nav</h1>
+    <div style={{ maxWidth: "30rem", margin: "4rem auto" }}>
       <Router>
         <Switch>
           <Route exact path="/add" component={AddUser} />
