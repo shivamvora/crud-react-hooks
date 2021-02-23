@@ -1,22 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Container, Nav, Navbar, NavbarBrand, NavItem } from 'reactstrap';
+import { Link } from "react-router-dom";
+import {
+  Navbar,
+  Nav,
+  NavItem,
+  NavbarBrand,
+  Container
+} from "reactstrap";
 
-const Heading = () => {
-    return (
-        <div>
-            <Navbar color="dark" dark>
-                <Container>
-                    <NavbarBrand href="/">  CRUD  </NavbarBrand>
-                    <Nav>
-                        <NavItem>
-                            <Link className="btn btn-primary" to="/add">Add user</Link>
-                        </NavItem>
-                    </Nav>
-                </Container>
-            </Navbar>
-        </div>
-    )
+export const Heading = () => {
+  return (
+    <Navbar color="dark" dark>
+      <Container>
+        <NavbarBrand href="/">My Team</NavbarBrand>
+        <Nav>
+          <NavItem>
+            <Link className="btn btn-primary" to="/add">Add User</Link>
+          </NavItem>
+        </Nav>
+
+      </Container>
+    </Navbar>
+  )
 }
-
-export default Heading;
