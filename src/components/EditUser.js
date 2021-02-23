@@ -6,7 +6,10 @@ import {
     FormGroup,
     Label,
     Input,
-    Button
+    Button,
+    Jumbotron,
+    Toast,
+    ToastHeader
 } from "reactstrap";
 
 export const EditUser = ( props ) => {
@@ -35,13 +38,20 @@ export const EditUser = ( props ) => {
     }
 
     return (
-        <Form onSubmit={onSubmit}>
-            <FormGroup>
-                <Label>Name</Label>
-                <Input type="text" value={selectedUser.name} onChange={onChange} name="name" placeholder="Enter user" required></Input>
-            </FormGroup>
-            <Button type="submit">Update Name</Button>
-            <Link to="/" className="btn btn-danger ml-2">Cancel</Link>
-        </Form>
+        <Jumbotron>
+            <Toast>
+                <ToastHeader>
+                    <Form onSubmit={onSubmit} className="mt-5">
+                        <FormGroup>
+                            <Label>Name</Label>
+                            <Input type="text" value={selectedUser.name} onChange={onChange} name="name" placeholder="Enter user" required></Input>
+                        </FormGroup>
+                        <Button type="submit">Update Name</Button>
+                        <Link to="/" className="btn btn-danger ml-2">Cancel</Link>
+                    </Form>
+                </ToastHeader>
+            </Toast>
+
+        </Jumbotron>
     )
 }
